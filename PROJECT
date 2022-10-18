@@ -1,0 +1,16 @@
+domain: k8s.sh
+layout:
+- go.kubebuilder.io/v3
+projectName: k8s-replicator
+repo: github.com/afarid/k8s-secrets-replicator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: k8s.sh
+  group: replicas
+  kind: ReplicatedSecret
+  path: github.com/afarid/k8s-secrets-replicator/api/v1
+  version: v1
+version: "3"

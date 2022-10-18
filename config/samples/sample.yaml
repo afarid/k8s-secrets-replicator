@@ -1,0 +1,13 @@
+apiVersion: replicas.k8s.sh/v1
+kind: ReplicatedSecret
+metadata:
+  name: sample-secret
+spec:
+  type: Opaque
+  secret_data:
+    key: dmFsdWU=
+  namespaces:
+    - default
+    - kube-system
+  namespaces_prefix: "example-"
+
